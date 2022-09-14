@@ -1,4 +1,4 @@
-package com.example.scheduledcluster;
+package com.example.shedlockwithzookeeper;
 
 import org.apache.zookeeper.server.NIOServerCnxnFactory;
 import org.apache.zookeeper.server.ServerCnxnFactory;

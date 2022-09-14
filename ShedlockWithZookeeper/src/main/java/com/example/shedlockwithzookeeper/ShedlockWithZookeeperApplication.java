@@ -1,4 +1,4 @@
-package com.example.scheduledcluster;
+package com.example.shedlockwithzookeeper;
 
 import net.javacrumbs.shedlock.core.LockProvider;
 import net.javacrumbs.shedlock.provider.zookeeper.curator.ZookeeperCuratorLockProvider;
@@ -16,7 +16,7 @@ import java.util.Date;
 @EnableScheduling
 @EnableSchedulerLock(defaultLockAtMostFor = "5s")
 @CustomEnableEmbeddedZooKeeper
-public class ScheduledClusterApplication {
+public class ShedlockWithZookeeperApplication {
 
     @Bean
     public LockProvider lockProvider(org.apache.curator.framework.CuratorFramework client) {
@@ -46,7 +46,7 @@ public class ScheduledClusterApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ScheduledClusterApplication.class, args);
+        SpringApplication.run(ShedlockWithZookeeperApplication.class, args);
     }
 
 }

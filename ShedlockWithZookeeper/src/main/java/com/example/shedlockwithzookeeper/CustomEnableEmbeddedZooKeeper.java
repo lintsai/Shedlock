@@ -1,4 +1,4 @@
-package com.example.scheduledcluster;
+package com.example.shedlockwithzookeeper;
 
 import org.springframework.context.annotation.Import;
 
