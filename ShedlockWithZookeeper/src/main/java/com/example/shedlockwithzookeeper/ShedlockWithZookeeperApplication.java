@@ -11,6 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication
 @EnableScheduling
@@ -23,8 +24,8 @@ public class ShedlockWithZookeeperApplication {
         return new ZookeeperCuratorLockProvider(client);
     }
 
-    @Scheduled(cron = "0/1 * * * * ?")
-    @SchedulerLock(name = "scheduledTask", lockAtMostFor = "1s", lockAtLeastFor = "1s")
+    @Scheduled(fixedDelayString = "${scheduledTask:6}", timeUnit = TimeUnit.SECONDS)
+    @SchedulerLock(name = "scheduledTask", lockAtMostFor = "${scheduledTask:6}s", lockAtLeastFor = "${scheduledTask:6}s")
     public void scheduledTask() {
         try {
             Thread.sleep(5000);
@@ -32,17 +33,6 @@ public class ShedlockWithZookeeperApplication {
             e.printStackTrace();
         }
         System.out.println(Thread.currentThread().getName() + " scheduledTask run..." + new Date());
-    }
-
-    @Scheduled(cron = "0/1 * * * * ?")
-    @SchedulerLock(name = "scheduledTask", lockAtMostFor = "1s", lockAtLeastFor = "1s")
-    public void scheduledTask2() {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println(Thread.currentThread().getName() + " scheduledTask2 run..." + new Date());
     }
 
     public static void main(String[] args) {
