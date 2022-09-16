@@ -1,5 +1,9 @@
-# SpringBoot
-SpringBoot Learn Project
+# Shedlock
+Shedlock Learn Project
+
+- Reference:
+
+  https://github.com/lukas-krecan/ShedLock
 
 ## ShedlockWithZookeeper
 
@@ -18,14 +22,14 @@ Use Shedlock with Embedded ZooKeeper implement the cluster scheduled
   https://github.com/lukas-krecan/ShedLock
 
 ## ZooKeeper
-The Embedded ZooKeeper Project
+The Embedded ZooKeeper Server Module
 
 - Reference:
 
   https://github.com/raonigabriel/spring-boot-embedded-zookeeper
 
 ## ApacheIgnite
-The Embedded Apache Ignite with cluster Project
+The Embedded Apache Ignite Server with cluster Module
 
 - Reference:
 
