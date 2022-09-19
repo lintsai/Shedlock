@@ -1,4 +1,4 @@
-package com.example.shedlockwithapacheignite;
+package com.example.shedlockwithzookeeper;
 
 import net.javacrumbs.shedlock.core.LockProvider;
 import net.javacrumbs.shedlock.provider.zookeeper.curator.ZookeeperCuratorLockProvider;
