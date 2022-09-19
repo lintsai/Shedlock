@@ -1,4 +1,4 @@
-package com.example.shedlockwithzookeeper;
+package com.example.shedlockwithapacheignite;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

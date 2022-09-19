@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/ZooKeeper/pom.xml" />
         <option value="$PROJECT_DIR$/ShedlockWithZookeeper/pom.xml" />
         <option value="$PROJECT_DIR$/ApacheIgnite/pom.xml" />
+        <option value="$PROJECT_DIR$/ShedlockWithApacheIgnite/pom.xml" />
       </list>
     </option>
   </component>

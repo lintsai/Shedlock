@@ -1,4 +1,4 @@
-package com.example.shedlockwithzookeeper;
+package com.example.shedlockwithapacheignite;
 
 import org.apache.zookeeper.server.NIOServerCnxnFactory;
 import org.apache.zookeeper.server.ServerCnxnFactory;

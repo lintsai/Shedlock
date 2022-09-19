@@ -27,7 +27,7 @@
             <artifactId>ignite-spring-boot-autoconfigure-ext</artifactId>
             <version>1.0.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.ignite/ignite-spring -->
+        <!-- https://mvnrepository.com/artifact/org.apache.ignite/ignite-core -->
         <dependency>
             <groupId>org.apache.ignite</groupId>
             <artifactId>ignite-core</artifactId>

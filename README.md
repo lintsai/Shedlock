@@ -28,6 +28,20 @@ The Embedded ZooKeeper Server Module
 
   https://github.com/raonigabriel/spring-boot-embedded-zookeeper
 
+## ShedlockWithApacheIgnite
+
+Use Shedlock with Embedded Apache Ignite implement the cluster scheduled
+
+"ignite.cluster.connect-string" in properties can implement cluster with Apache Ignite.
+
+use ignite cache can sync data in memory with different service.
+
+- Reference:
+
+  https://ignite.apache.org/docs/latest/extensions-and-integrations/spring/spring-boot
+
+  https://github.com/lukas-krecan/ShedLock
+
 ## ApacheIgnite
 The Embedded Apache Ignite Server with cluster Module
 

@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>ShedlockWithZookeeper</artifactId>
+    <artifactId>ShedlockWithApacheIgnite</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ShedlockWithZookeeper</name>
-    <description>ShedlockWithZookeeper</description>
+    <name>ShedlockWithApacheIgnite</name>
+    <description>ShedlockWithApacheIgnite</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -25,9 +25,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.ignite/ignite-spring-boot-autoconfigure-ext -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
+            <groupId>org.apache.ignite</groupId>
+            <artifactId>ignite-spring-boot-autoconfigure-ext</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.ignite/ignite-core -->
+        <dependency>
+            <groupId>org.apache.ignite</groupId>
+            <artifactId>ignite-core</artifactId>
+            <version>2.13.0</version>
         </dependency>
         <dependency>
             <groupId>net.javacrumbs.shedlock</groupId>
@@ -36,23 +44,8 @@
         </dependency>
         <dependency>
             <groupId>net.javacrumbs.shedlock</groupId>
-            <artifactId>shedlock-provider-zookeeper-curator</artifactId>
+            <artifactId>shedlock-provider-ignite</artifactId>
             <version>4.42.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.zookeeper</groupId>
-            <artifactId>zookeeper</artifactId>
-            <version>3.8.0</version>
-        </dependency>
-        <dependency>
-            <groupId>io.dropwizard.metrics</groupId>
-            <artifactId>metrics-core</artifactId>
-            <version>4.2.12</version>
-        </dependency>
-        <dependency>
-            <groupId>org.xerial.snappy</groupId>
-            <artifactId>snappy-java</artifactId>
-            <version>1.1.8.4</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

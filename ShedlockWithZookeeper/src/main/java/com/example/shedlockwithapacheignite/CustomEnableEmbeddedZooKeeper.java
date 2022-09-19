@@ -1,4 +1,4 @@
-package com.example.shedlockwithzookeeper;
+package com.example.shedlockwithapacheignite;
 
 import org.springframework.context.annotation.Import;
 

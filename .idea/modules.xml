@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ApacheIgnite/ApacheIgnite.iml" filepath="$PROJECT_DIR$/ApacheIgnite/ApacheIgnite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShedlockWithApacheIgnite/ShedlockWithApacheIgnite.iml" filepath="$PROJECT_DIR$/ShedlockWithApacheIgnite/ShedlockWithApacheIgnite.iml" />
       <module fileurl="file://$PROJECT_DIR$/ShedlockWithZookeeper/ShedlockWithZookeeper.iml" filepath="$PROJECT_DIR$/ShedlockWithZookeeper/ShedlockWithZookeeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZooKeeper/ZooKeeper.iml" filepath="$PROJECT_DIR$/ZooKeeper/ZooKeeper.iml" />
     </modules>
