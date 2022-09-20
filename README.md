@@ -48,3 +48,10 @@ The Embedded Apache Ignite Server with cluster Module
 - Reference:
 
   https://ignite.apache.org/docs/latest/extensions-and-integrations/spring/spring-boot
+
+## Redis
+The Embedded Redis Server Module
+
+- Reference:
+
+  https://github.com/caryyu/spring-embedded-redis-server

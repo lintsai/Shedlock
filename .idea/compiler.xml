@@ -2,11 +2,13 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ShedlockWithZookeeper" />
+        <module name="Redis" />
         <module name="ZooKeeper" />
         <module name="ApacheIgnite" />
         <module name="ShedlockWithApacheIgnite" />
@@ -15,6 +17,7 @@
     <bytecodeTargetLevel>
       <module name="ApacheIgnite" target="1.8" />
       <module name="demo" target="1.8" />
+      <module name="Redis" target="1.8" />
       <module name="ShedlockWithApacheIgnite" target="1.8" />
       <module name="ShedlockWithZookeeper" target="1.8" />
       <module name="ShedlockWithZookeeper (1)" target="1.8" />
@@ -24,6 +27,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ApacheIgnite" options="-parameters" />
+      <module name="Redis" options="-parameters" />
       <module name="ShedlockWithApacheIgnite" options="-parameters" />
       <module name="ShedlockWithZookeeper" options="-parameters" />
       <module name="ShedlockWithZookeeper (1)" options="-parameters" />
