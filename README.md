@@ -49,9 +49,29 @@ The Embedded Apache Ignite Server with cluster Module
 
   https://ignite.apache.org/docs/latest/extensions-and-integrations/spring/spring-boot
 
+## ShedlockWithRedis
+
+Use Shedlock with Embedded Redis implement the cluster scheduled
+
+"spring.redis.sentinel.nodes" in properties can implement sentinel cluster with Redis.
+
+use spring cache can sync data in memory with different service.
+
+- Reference:
+
+  https://github.com/kstyrc/embedded-redis
+  
+  https://github.com/caryyu/spring-embedded-redis-server
+
+  https://www.baeldung.com/spring-boot-redis-cache
+
+  https://github.com/lukas-krecan/ShedLock
+
 ## Redis
 The Embedded Redis Server Module
 
 - Reference:
+
+  https://github.com/kstyrc/embedded-redis
 
   https://github.com/caryyu/spring-embedded-redis-server

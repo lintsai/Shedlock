@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/ShedlockWithApacheIgnite/pom.xml" />
         <option value="$PROJECT_DIR$/Memcache/pom.xml" />
         <option value="$PROJECT_DIR$/Redis/pom.xml" />
+        <option value="$PROJECT_DIR$/ShedlockWithRedis/pom.xml" />
       </list>
     </option>
   </component>

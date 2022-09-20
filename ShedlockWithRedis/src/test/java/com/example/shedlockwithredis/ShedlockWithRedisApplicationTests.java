@@ -1,10 +1,10 @@
-package com.example.memcache;
+package com.example.shedlockwithredis;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RedisApplicationTests {
+class ShedlockWithRedisApplicationTests {
 
     @Test
     void contextLoads() {

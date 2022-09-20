@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ShedlockWithZookeeper" />
         <module name="Redis" />
+        <module name="ShedlockWithRedis" />
         <module name="ZooKeeper" />
         <module name="ApacheIgnite" />
         <module name="ShedlockWithApacheIgnite" />
@@ -19,6 +20,7 @@
       <module name="demo" target="1.8" />
       <module name="Redis" target="1.8" />
       <module name="ShedlockWithApacheIgnite" target="1.8" />
+      <module name="ShedlockWithRedis" target="1.8" />
       <module name="ShedlockWithZookeeper" target="1.8" />
       <module name="ShedlockWithZookeeper (1)" target="1.8" />
       <module name="ZooKeeper" target="1.8" />
@@ -29,6 +31,7 @@
       <module name="ApacheIgnite" options="-parameters" />
       <module name="Redis" options="-parameters" />
       <module name="ShedlockWithApacheIgnite" options="-parameters" />
+      <module name="ShedlockWithRedis" options="-parameters" />
       <module name="ShedlockWithZookeeper" options="-parameters" />
       <module name="ShedlockWithZookeeper (1)" options="-parameters" />
       <module name="ZooKeeper" options="-parameters" />
