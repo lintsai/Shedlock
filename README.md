@@ -7,11 +7,11 @@ Shedlock Learn Project
 
 ## ShedlockWithZookeeper
 
-Use Shedlock with Embedded ZooKeeper implement the cluster scheduled
+Use Shedlock with Embedded ZooKeeper implement the cluster scheduled.
 
 "spring.cloud.zookeeper.connect-string" in properties can implement cluster with ZooKeeper.
 
-"server.port" and "zookeeper.port" should be different, then Actuator can use
+"server.port" and "zookeeper.port" should be different, then Actuator can use.
 
 - Reference:
 
@@ -30,15 +30,15 @@ The Embedded ZooKeeper Server Module
 
 ## ShedlockWithApacheIgnite
 
-Use Shedlock with Embedded Apache Ignite implement the cluster scheduled
+Use Shedlock with Embedded Apache Ignite implement the cluster scheduled.
 
 "ignite.cluster.connect-string" in properties can implement cluster with Apache Ignite.
 
-use spring cache with h2 1.4.196 version can sync data in memory with different service.
+Use spring cache with h2 1.4.196 version can sync data in memory with different service.
 
-Note: Can't use new h2 version with ignite
+Note: Can't use new h2 version with ignite.
 
-use ignite cache can sync data in memory with different service.
+Use ignite cache can sync data in memory with different service.
 
 - Reference:
 
@@ -57,11 +57,15 @@ The Embedded Apache Ignite Server with cluster Module
 
 ## ShedlockWithRedis
 
-Use Shedlock with Embedded Redis implement the cluster scheduled
+Use Shedlock with Embedded Redis implement the cluster scheduled.
+
+Use sentinel cluster mode need set "spring.redis.sentinel=true" and "spring.redis.sentinel.*" properties.
 
 "spring.redis.sentinel.nodes" in properties can implement sentinel cluster with Redis.
 
-use spring cache can sync data in memory with different service.
+"server.port" and "spring.redis.port" should be different, then Actuator can use.
+
+Use spring cache can sync data in memory with different service.
 
 - Reference:
 
