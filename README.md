@@ -34,11 +34,17 @@ Use Shedlock with Embedded Apache Ignite implement the cluster scheduled
 
 "ignite.cluster.connect-string" in properties can implement cluster with Apache Ignite.
 
+use spring cache with h2 1.4.196 version can sync data in memory with different service.
+
+Note: Can't use new h2 version with ignite
+
 use ignite cache can sync data in memory with different service.
 
 - Reference:
 
   https://ignite.apache.org/docs/latest/extensions-and-integrations/spring/spring-boot
+
+  https://ignite.apache.org/docs/latest/extensions-and-integrations/spring/spring-caching
 
   https://github.com/lukas-krecan/ShedLock
 

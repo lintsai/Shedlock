@@ -15,6 +15,8 @@
     <description>ShedlockWithApacheIgnite</description>
     <properties>
         <java.version>1.8</java.version>
+        <!-- use spring cache need use ignite-spring with h2 version 1.4.196 -->
+        <h2.version>1.4.196</h2.version>
     </properties>
     <dependencies>
         <dependency>
@@ -32,9 +34,22 @@
             <version>1.0.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.ignite/ignite-core -->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.ignite</groupId>-->
+<!--            <artifactId>ignite-core</artifactId>-->
+<!--            <version>2.13.0</version>-->
+<!--        </dependency>-->
+        <!-- use spring cache need use ignite-spring with h2 version 1.4.196 -->
+        <!-- https://mvnrepository.com/artifact/org.apache.ignite/ignite-spring-cache-ext -->
         <dependency>
             <groupId>org.apache.ignite</groupId>
-            <artifactId>ignite-core</artifactId>
+            <artifactId>ignite-spring-cache-ext</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.ignite/ignite-spring -->
+        <dependency>
+            <groupId>org.apache.ignite</groupId>
+            <artifactId>ignite-spring</artifactId>
             <version>2.13.0</version>
         </dependency>
         <dependency>
