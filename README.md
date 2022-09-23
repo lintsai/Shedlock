@@ -85,3 +85,6 @@ The Embedded Redis Server Module
   https://github.com/kstyrc/embedded-redis
 
   https://github.com/caryyu/spring-embedded-redis-server
+
+## RedisClient
+The Redis Client Module with Spring Cache Sample
