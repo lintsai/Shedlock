@@ -6,7 +6,6 @@ import net.javacrumbs.shedlock.spring.annotation.EnableSchedulerLock;
 import net.javacrumbs.shedlock.spring.annotation.SchedulerLock;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
-import org.apache.ignite.cache.CacheMode;
 import org.apache.ignite.cache.spring.SpringCacheManager;
 import org.apache.ignite.configuration.*;
 import org.apache.ignite.spi.communication.tcp.TcpCommunicationSpi;
@@ -41,7 +40,7 @@ public class ShedlockWithApacheIgniteApplication {
     private String clusterConnectString;
 
     @Resource
-    private TestCacheData testCacheData;
+    private SampleCache sampleCache;
 
     @Autowired
     private ApplicationContext applicationContext;
@@ -86,18 +85,18 @@ public class ShedlockWithApacheIgniteApplication {
         return new IgniteLockProvider(ignite);
     }
 
-    @Scheduled(fixedDelayString = "${scheduledTask:6}", timeUnit = TimeUnit.SECONDS)
-    @SchedulerLock(name = "scheduledTask", lockAtMostFor = "${scheduledTask:6}s", lockAtLeastFor = "${scheduledTask:6}s")
-    public void scheduledTask() {
+    @Scheduled(fixedDelayString = "6", timeUnit = TimeUnit.SECONDS)
+    @SchedulerLock(name = "sampleSchedlock", lockAtMostFor = "6s", lockAtLeastFor = "6s")
+    public void run() {
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         // use Spring Cache
-        System.out.println("[1] " + Thread.currentThread().getName() + " scheduledTask run...spring cache: " + testCacheData.getTestCacheData());
-        testCacheData.setTestCacheData(new Date() + ", save port: " + igniteLocalPort);
-        System.out.println("[2] " + Thread.currentThread().getName() + " scheduledTask run...spring cache: " + testCacheData.getTestCacheData());
+        System.out.println("[1] " + Thread.currentThread().getName() + " sampleSchedlock run..." + sampleCache.getSampleCacheData());
+        sampleCache.setSampleCacheData(new Date() + ", save port: " + igniteLocalPort);
+        System.out.println("[2] " + Thread.currentThread().getName() + " sampleSchedlock run..." + sampleCache.getSampleCacheData());
 
         // use Ignite Cache
         Ignite ignite = applicationContext.getBean("ignite", Ignite.class);

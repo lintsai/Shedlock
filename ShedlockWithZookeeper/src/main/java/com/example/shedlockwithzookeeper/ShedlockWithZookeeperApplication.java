@@ -24,15 +24,15 @@ public class ShedlockWithZookeeperApplication {
         return new ZookeeperCuratorLockProvider(client);
     }
 
-    @Scheduled(fixedDelayString = "${scheduledTask:6}", timeUnit = TimeUnit.SECONDS)
-    @SchedulerLock(name = "scheduledTask", lockAtMostFor = "${scheduledTask:6}s", lockAtLeastFor = "${scheduledTask:6}s")
-    public void scheduledTask() {
+    @Scheduled(fixedDelayString = "6", timeUnit = TimeUnit.SECONDS)
+    @SchedulerLock(name = "sampleSchedlock", lockAtMostFor = "6s", lockAtLeastFor = "6s")
+    public void run() {
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println(Thread.currentThread().getName() + " scheduledTask run..." + new Date());
+        System.out.println(Thread.currentThread().getName() + " sampleSchedlock run..." + new Date());
     }
 
     public static void main(String[] args) {
