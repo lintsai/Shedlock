@@ -67,24 +67,33 @@ Use sentinel cluster mode need set "spring.redis.sentinel=true" and "spring.redi
 
 Use spring cache can sync data in memory with different service.
 
+Redis Version "Redis for Windows 5.0.14.1"
+
 - Reference:
 
-  https://github.com/kstyrc/embedded-redis
+  https://github.com/signalapp/embedded-redis
   
   https://github.com/caryyu/spring-embedded-redis-server
+
+  https://github.com/tporadowski/redis/releases
 
   https://www.baeldung.com/spring-boot-redis-cache
 
   https://github.com/lukas-krecan/ShedLock
 
 ## Redis
+
 The Embedded Redis Server Module
+
+Redis Version "Redis for Windows 5.0.14.1"
 
 - Reference:
 
-  https://github.com/kstyrc/embedded-redis
+  https://github.com/signalapp/embedded-redis
 
   https://github.com/caryyu/spring-embedded-redis-server
+
+  https://github.com/tporadowski/redis/releases
 
 ## RedisClient
 The Redis Client Module with Spring Cache Sample

@@ -8,6 +8,8 @@ import org.springframework.context.EnvironmentAware;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import redis.embedded.*;
+import redis.embedded.util.Architecture;
+import redis.embedded.util.OS;
 
 @Component
 public class RedisServerConfiguration implements DisposableBean, EnvironmentAware, InitializingBean {
@@ -55,21 +57,31 @@ public class RedisServerConfiguration implements DisposableBean, EnvironmentAwar
     }
 
     public void afterPropertiesSet() throws Exception {
+        int port = this.getPort();
+        RedisExecProvider customProvider = RedisExecProvider.defaultProvider()
+                .override(OS.WINDOWS, "redis-server.exe");
         if (this.isEmbedded()) {
-            int port = this.getPort();
-            RedisServerBuilder redisServerBuilder = RedisServer.builder().port(port);
+            RedisServerBuilder redisServerBuilder =
+                    RedisServer.builder()
+                            .redisExecProvider(customProvider)
+                            .port(port);
             this.redisServer = redisServerBuilder.build();
             this.redisServer.start();
             if (this.log.isInfoEnabled()) {
                 this.log.info("Starting local embedded redis server successfully, port is " + port);
             }
-            if (this.isSentinel()) {
-                int sentinelPort = this.getSentinelPort();
-                this.redisSentinel = RedisSentinel.builder().masterPort(port).port(sentinelPort).build();
-                this.redisSentinel.start();
-                if (this.log.isInfoEnabled()) {
-                    this.log.info("Starting local embedded redis sentinal server successfully, masterPort is " + port + ", sentinelPort is " + sentinelPort);
-                }
+        }
+        if (this.isSentinel()) {
+            int sentinelPort = this.getSentinelPort();
+            RedisSentinelBuilder redisSentinelServerBuilder =
+                    RedisSentinel.builder()
+                            .redisExecProvider(customProvider)
+                            .masterPort(port)
+                            .port(sentinelPort);
+            this.redisSentinel = redisSentinelServerBuilder.build();
+            this.redisSentinel.start();
+            if (this.log.isInfoEnabled()) {
+                this.log.info("Starting local embedded redis sentinal server successfully, masterPort is " + port + ", sentinelPort is " + sentinelPort);
             }
         }
     }
