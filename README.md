@@ -1,5 +1,5 @@
 # Shedlock
-Shedlock Learn Project
+Shedlock Sample Project
 
 - Reference:
 
